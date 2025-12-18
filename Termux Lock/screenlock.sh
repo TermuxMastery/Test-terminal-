@@ -2,13 +2,18 @@
 # Termux Lock Screen 🔐
 # Password: 123456
 
+# --------------------------
+# Colors
+# --------------------------
 RED="\e[31m"
 GREEN="\e[32m"
-YELLOW="\e[33m"
 CYAN="\e[36m"
 MAGENTA="\e[35m"
 RESET="\e[0m"
 
+# --------------------------
+# Header
+# --------------------------
 header() {
     clear
     echo -e "${MAGENTA}╔══════════════════════════════╗${RESET}"
@@ -17,6 +22,9 @@ header() {
     echo ""
 }
 
+# --------------------------
+# Lock screen
+# --------------------------
 lock_screen() {
     header
     read -sp "Enter Password 🔑: " password
@@ -32,4 +40,7 @@ lock_screen() {
     fi
 }
 
+# --------------------------
+# Start
+# --------------------------
 lock_screen
